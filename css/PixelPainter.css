@@ -1,0 +1,68 @@
+body{
+  background-image: url('https://www.wallpaperup.com/uploads/wallpapers/2014/09/02/433560/8c61649ed348de8dfbb207de939a6a72-700.jpg');
+  background-size: cover; 
+  font-family: 'Happy Monkey', cursive;
+}
+
+h1 {
+  text-align: center;
+  font-size: 40px;
+}
+
+#pixelPainter {
+ text-align: left;
+ font-size: 25px;
+}
+
+.erase {
+  border-style: double; 
+  width: 80px;
+  background-color: white;
+  position: relative;
+  top: 30px;
+  left: 40px;
+}
+
+.clear {
+  border-style: double; 
+  width: 80px;
+  background-color: white;
+  position: relative;
+  top: 40px;
+  left: 40px;
+}
+
+#board {
+  position: relative;
+	bottom: 320px;
+	outline:2px solid #000;
+	font-size: 0;
+	margin:auto;
+	height:500px;
+  width:500px;
+	padding: 0;
+}
+
+.grid {
+width: 20px;
+height: 20px;
+outline:1px solid #000;
+display: inline-flex;
+flex-wrap: wrap;
+background-color: white;
+}
+
+.colours {
+  width: 50px;
+  height: 50px;
+  outline: 1px solid white;
+}
+
+.color-grid {
+  width: 50px;
+  position: relative;
+  top: 100px;
+  left: 50px;
+  border-style: groove;
+  border-radius: 5px;
+}
