@@ -34,7 +34,7 @@ h1 {
 
 #board {
   position: relative;
-	bottom: 320px;
+	bottom: 350px;
 	outline:2px solid #000;
 	font-size: 0;
 	margin:auto;
@@ -53,13 +53,13 @@ background-color: white;
 }
 
 .colours {
-  width: 50px;
-  height: 50px;
+  width: 30px;
+  height: 30px;
   outline: 1px solid white;
 }
 
 .color-grid {
-  width: 50px;
+  width: 30px;
   position: relative;
   top: 100px;
   left: 50px;

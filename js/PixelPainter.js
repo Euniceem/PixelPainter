@@ -1,6 +1,5 @@
-const colours = ['#000000', '#FF0000', '#FFA500', '#008000', '#0000FF', '#800080', '#FFC0CB', '#FFFFFF'];
+const colours = ['#000000', '#FF0000', '#FFA500', '#008000', '#0000FF', '#800080', '#FFC0CB', '#808080', '#FA8072', '#FFD700', '#90EE90', '#00FFFF', '#ADD8E6', '#E6E6FA', '#FFE4E1'];
 let holdColor;
-let white = ['#FFFFFF']
 
 //HTML Addons
 
@@ -16,25 +15,13 @@ clearButton.className = "clear";
 clearButton.innerHTML = "Clear";
 pixelPainter.appendChild(clearButton);
 
-// //Save Button
-// const saveButton = document.createElement('button');
-// saveButton.className = "save";
-// saveButton.innerHTML = "Save";
-// pixelPainter.appendChild(saveButton);
 
-// //Load Button
-// const loadButton = document.createElement('button');
-// loadButton.className = "load";
-// loadButton.innerHTML = "Load";
-// pixelPainter.appendChild(loadButton);
-
-
-//Canvas Colors
 // Color Grid
 const colorGrid = document.createElement('div')
 colorGrid.className = "color-grid";
 pixelPainter.appendChild(colorGrid);
 
+//Canvas Colors
 
 const colorCanvas = function () {
   for (var i = 0; i < colours.length; i++) {
@@ -46,9 +33,9 @@ const colorCanvas = function () {
     colorSet.addEventListener('click', function (evt) {
       holdColor = evt.target.id;
     });
-  }
-}
-colorCanvas()
+  };
+};
+colorCanvas();
 
 // Grid Canvas
 const gridBoard = document.createElement('div');
@@ -85,9 +72,17 @@ const makeGrids = function (x, y) {
       });
       // Eraser
       const eraser = eraseButton.addEventListener('click', function () {
-        console.log(gridBoard)
-        if (gridBoard === holdColor) {
-          gridCanvas.style.background = 'white';
+        // target.style.backgroundColor = null;
+      })
+      gridCanvas.addEventListener('mouseup', function () {
+        down = false;
+      })
+      gridCanvas.addEventListener('mousedown', function () {
+        down = true;
+      })
+      gridCanvas.addEventListener('mouseover', function () {
+        if (down === false) {
+          gridCanvas.style.backgroundColor = null;
         }
       })
     };
